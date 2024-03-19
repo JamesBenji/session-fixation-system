@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | TrustWell</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      :root {
+        --ui-blue: rgb(0, 64, 221);
+        --ui-green: #4db33d;
+      }
+      
+
+      nav {
+        background-color: var(--ui-green);
+        padding: 10px 0 10px 100px;
+        display: flex;
+        align-items: center;
+      }
+
+      .main-section {
+        padding: 0 100px 0 100px;
+      }
+
+      .business-name {
+        font-family: PublicSans-Bold;
+        font-size: 4rem;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .links {
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 4rem;
+        /* background-color: red; */
+        padding: 5px;
+      }
+
+      /* .links a{
+            text-decoration: none;
+            color: white;
+            border-radius: 12px;
+            padding: 10px 24px;
+            background-color: var(--ui-green);
+        } */
+      #login {
+        text-decoration: none;
+        color: white;
+        /* border: 1px black solid; */
+        border-radius: 12px;
+        padding: 10px 24px;
+        background-color: var(--ui-green);
+        border: 2px solid white;
+        margin: 1px;
+      }
+      #login:hover {
+        border: 2px solid var(--ui-blue);
+      }
+
+      #register {
+        text-decoration: none;
+        color: white;
+        /* border: 1px black solid; */
+        border-radius: 12px;
+        padding: 10px 24px;
+        background-color: var(--ui-green);
+      }
+      #register:hover {
+        border: 2px solid black;
+      }
+    </style>
+
+    <!-- <script>
+      const regex = /connect\.sid=s%3A([^.\s]*)/;
+      const cookieString = document.cookie;
+      const match = regex.exec(cookieString);
+      const sessionId = match ? match[1] : null;
+
+      console.log("Session ID:", sessionId);
+    </script> -->
+  </head>
+  <body>
+    <nav>
+      <div class="trust-logo">
+        <img
+          src="../images/TrustWell accounting white.png"
+          alt="logo"
+          width=""
+        />
+        <!-- img not working -->
+      </div>
+    </nav>
+
+    <div class="main-section">
+      <div class="business-name">TrustWell<br />Accounting</div>
+      <div id="sid"></div>
+      <div class="links">
+        <button onclick="makeLoginQuery();">Login</button>
+        <button onclick="makeRegister();">Register</button>
+      </div>
+    </div>
+
+    <script>
+    //   document.getElementById("sid").innerText = sessionId;
+
+      const makeLoginQuery = () => {
+        window.location.href = `/login`;
+      };
+      const makeRegister = () => {
+        window.location.href = `/register`;
+      };
+    </script>
+  </body>
+</html>

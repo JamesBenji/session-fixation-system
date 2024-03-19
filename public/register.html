@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register | TrustWell</title>
+    <link
+      rel="stylesheet"
+      href="http://localhost:7000/files/css/login.css"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <div class="head">
+      <img
+        src="http://localhost:7000/files/images/TrustWell accounting white.png"
+        alt="Logo"
+        width="250"
+      />
+
+      <div class="routes">
+        <a href="/login" class="link">Login</a>
+        <a href="/register" class="link">Register</a>
+      </div>
+    </div>
+
+    
+    <div class="main">
+        <span>Register with TrustWell</span><br><br>
+      <div id="form-container">
+        <form action="/register" method="post">
+          <div class="form-div">
+            <label for="username">Username</label>
+            <input type="text" name="username" />
+          </div>
+          <div class="form-div">
+            <label for="email">Email</label>
+            <input type="email" name="email" />
+          </div>
+          <div class="form-div">
+            <label for="password">Password</label>
+            <input type="password" name="password" />
+          </div>
+
+          <div class="form-btns">
+            <input type="reset" value="Cancel" class="form-btn" />
+            <input type="submit" value="Register" class="form-btn" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

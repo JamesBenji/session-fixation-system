@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="http://localhost:7000/files/css/login.css"
+      type="text/css"
+    />
+    <title>Login | TrustWell</title>
+  </head>
+  <body>
+    <div class="head">
+      <img
+        src="http://localhost:7000/files/images/TrustWell accounting white.png"
+        alt="Logo"
+        width="250"
+      />
+
+      <div class="routes">
+        <a href="/login" class="link">Login</a>
+        <a href="/register" class="link">Register</a>
+      </div>
+    </div>
+
+
+    <!-- <h1>TrustWell</h1> -->
+    <div class="main">     
+
+      <div id="form-container">
+        <span>Login</span><br><br><br>
+        <form action="/auth" method="post" id="loginForm">
+          <div class="form-div">
+            <label for="email">Email</label>
+            <input type="text" name="email" placeholder="someone@email.com"/>
+          </div>
+          <div class="form-div">
+            <label for="password">Password</label>
+            <input type="password" name="password" placeholder="****"/>
+          </div>
+
+          <div class="form-btns">
+            <input type="reset" value="Cancel" class="form-btn"/>
+            <input type="submit" value="Login" class="form-btn"/>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="sid"></div>
+
+    <script>
+      const loginForm = document.getElementById("loginForm");
+      const currentUrl = window.location.href;
+      const lastSlashIndex = currentUrl.lastIndexOf("=");
+      console.log(lastSlashIndex);
+      if (lastSlashIndex > 0) {
+        const sessionId = currentUrl.substring(lastSlashIndex + 1);
+        console.log(sessionId);
+        document.getElementById("sid").innerText = sessionId;
+        loginForm.setAttribute("action", `/auth?sid=${sessionId}`);
+      } else {
+        loginForm.setAttribute("action", `/auth?sid=`);
+      }
+    </script>
+  </body>
+</html>

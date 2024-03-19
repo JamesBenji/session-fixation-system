@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link
+    rel="stylesheet"
+    href="http://localhost:7000/files/css/login.css"
+    type="text/css"
+  />
+  </head>
+  <body>
+    <div class="head">
+      <img
+        src="http://localhost:7000/files/images/TrustWell accounting white.png"
+        alt="Logo"
+        width="250"
+      />
+
+      <div class="routes">
+        <form action="/logout?sid=<%= userData?.sessionID %>" method="post" name="logout-form" logout-form>
+          <span id="header-username"><%= userData.username %></span>
+          <input type="submit" value="Logout" id="logout"/>
+        </form>
+      </div>
+    </div>
+
+    <div class="wrapper">
+
+    <% if(userData) {%>
+    <span class="welcome-user">Welcome <b><%= userData?.username %></b></span><br><br>
+    <span class="welcome-email">Email: <b><%= userData?.email %></b></span><br><br>
+    <span class="welcome-session">Session ID: <span id="session"><%= userData?.sessionID %></span></span>
+    
+    <% } else {%>
+    <p>Hello unauth user</p>
+    <% } %>
+    
+  </div>
+  </body>
+</html>

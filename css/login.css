@@ -1,0 +1,144 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+@font-face {
+    font-family: Raleway;
+    src: url("http://localhost:7000/fonts/Raleway-Bold.ttf");
+  }
+  @font-face {
+    font-family: PublicSans-Bold;
+    src: url("http://localhost:7000/fonts/PublicSans-Bold.ttf");
+  }
+
+.head{
+    background-color: black;
+    min-width: 100%;
+    height: fit-content;
+    color: white;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.head img{
+    margin: 0 10rem;
+}
+.routes{
+    margin: 5px 10rem;
+    font-family: PublicSans-Bold;
+    
+}
+
+.link{
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    margin: 0 10px;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.link:hover{
+    background-color: white;
+    color: black;
+}
+
+.main{
+    background-color: antiquewhite;
+    border-radius: 3rem;
+    padding: 3rem;
+    width: 50%;
+    display: block;
+    margin: 3rem auto;
+
+}
+
+span{
+    font-size: 4rem;
+}
+
+.form-div{
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0 4rem;
+}
+
+.form-div input{
+    width: 20rem;
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+}
+
+.form-btns{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 1.5rem;    
+}
+
+.form-btn{
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 12px;
+    font-size: 1.5rem;
+    transition: 0.5s;
+}
+
+
+.form-btn:hover{
+    background-color: white;
+    color: black;
+}
+
+#header-username{
+    font-size: 1.5rem;
+}
+
+
+#logout{
+    border: none;
+    font-size: 1.2rem;
+    background-color: black;
+    color: white;
+    border: 2px rgb(225, 225, 225) solid;
+    border-radius: 10px;
+    padding: 5px 15px;
+}
+#logout:hover{
+    color: black;
+    background-color: white;
+}
+.wrapper{
+    display: block;
+    margin-left: 20%;
+    font-family: Raleway;
+    margin-top: 5vh;
+}
+#header-username{
+    margin-right: 20px;
+}
+
+.welcome-user{
+    font-size: 2rem;
+}
+
+.welcome-session{
+    font-size: 2rem;
+}
+
+.welcome-email{
+    font-size: 2rem;
+}
+
+#session{
+    background-color: black;
+    color: white;
+    font-size: 2rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
